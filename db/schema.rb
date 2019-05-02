@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_01_202354) do
+ActiveRecord::Schema.define(version: 2019_05_02_184622) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2019_05_01_202354) do
     t.integer "pizza_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "slices", default: 1
   end
 
   create_table "pizzas", force: :cascade do |t|

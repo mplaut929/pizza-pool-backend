@@ -23,6 +23,8 @@ Pizza.find_or_create_by(name: "BBQ Chicken", price: 12, vegan: false)
 Pizza.find_or_create_by(name: "Pepperoni", price: 20, vegan: false)
 
 
-40.times do
-  PizzaSlice.create(user_id: rand(1..5), pizza_id: rand(1..10))
-end
+# 20.times do
+#   PizzaSlice.find_or_create_by(user_id: rand(6..10), pizza_id: rand(11..20), slices: 1)
+# end
+
+PizzaSlice.find_or_create_by(user_id: 6, pizza_id: 19, slices: 5)
