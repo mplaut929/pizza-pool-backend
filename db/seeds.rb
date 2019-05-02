@@ -12,6 +12,6 @@ Pizza.find_or_create_by(name: "White", price: 10, vegan: false)
 Pizza.find_or_create_by(name: "Cheese", price: 8, vegan: false)
 
 
-PizzaSlice.find_or_create_by(user_id: 1, pizza_id: 2)
-PizzaSlice.find_or_create_by(user_id: 2, pizza_id: 1)
-PizzaSlice.find_or_create_by(user_id: 1, pizza_id: 2)
+PizzaSlice.create(user_id: 1, pizza_id: 2)
+PizzaSlice.create(user_id: 2, pizza_id: 1)
+PizzaSlice.create(user_id: 1, pizza_id: 2)
