@@ -7,10 +7,11 @@ class PizzasController < ApplicationController
 
 
   def create
-    byebug
     @pizzas = Pizza.all
     @pizza = Pizza.create(pizza_params)
-    render json: @pizzas
+    @user = User.find_or_create_by(name: params[:pizza_slices][:user_name])
+    @pizza_slice = PizzaSlice.find_or_create_by(user_id: @user.id, pizza_id: @pizza.id, slices: params[:pizza_slices][:slices])
+    render json: @pizza
   end
 
   private
