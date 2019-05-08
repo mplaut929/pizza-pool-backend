@@ -22,6 +22,11 @@ class PizzasController < ApplicationController
     render json: @pizza
   end
 
+  def destroy
+    @pizza = Pizza.find(params[:id])
+    @pizza.destroy
+  end
+
   private
 
   def pizza_params
